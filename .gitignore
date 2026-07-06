@@ -1,26 +1,53 @@
+# .NET / Visual Studio
 bin/
 obj/
+[Bb]in/
+[Oo]bj/
 .vs/
 .vscode/
-.agents/
+*.user
+*.suo
+*.rsuser
+*.sln.docstates
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+*.nupkg
+*.snupkg
+artifacts/
+.artifacts/
+
+# Node / Next.js
 node_modules/
 .next/
 out/
 coverage/
-TestResults/
-local.settings.json
-appsettings.Development.local.json
-*.user
-*.suo
-.env
-.env.*
-!.env.example
+*.tsbuildinfo
+
+# Python
 __pycache__/
 *.py[cod]
-*.tsbuildinfo
 backend/.deps/
 backend/.venv/
 backend/.pythonlibs/
 backend/.sandboxlibs/
 backend/.wheels/
 backend/nonprofit_fund.db
+
+# Local config and secrets
+.agents/
+.env
+.env.*
+!.env.example
+local.settings.json
+appsettings.Development.local.json
+*.pubxml
+*.publishsettings
+
+# OS / editor noise
+*.log
+*.tmp
+*.cache
+.history/
