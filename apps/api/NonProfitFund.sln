@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonProfitFund.Api", "src\NonProfitFund.Api\NonProfitFund.Api.csproj", "{2E25995B-48E2-4D47-8AA4-9F53F46F1B01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonProfitFund.Application", "src\NonProfitFund.Application\NonProfitFund.Application.csproj", "{0B54277B-0D53-49F7-A55E-EE827F6A0121}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonProfitFund.Domain", "src\NonProfitFund.Domain\NonProfitFund.Domain.csproj", "{F4E12F87-4DA9-462A-8043-AF6331FB9C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonProfitFund.Infrastructure", "src\NonProfitFund.Infrastructure\NonProfitFund.Infrastructure.csproj", "{6568365B-9DA8-4F77-A70E-5D6052153B9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonProfitFund.Api.Tests", "tests\NonProfitFund.Api.Tests\NonProfitFund.Api.Tests.csproj", "{DB02C3B9-FF52-4380-8A7E-B4C32880B8DE}"
+EndProject
+Global
+  GlobalSection(SolutionConfigurationPlatforms) = preSolution
+    Debug|Any CPU = Debug|Any CPU
+    Release|Any CPU = Release|Any CPU
+  EndGlobalSection
+EndGlobal
+

@@ -1,0 +1,39 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run web:typecheck
+      - run: npm run web:build
+
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+      - run: dotnet restore apps/api/NonProfitFund.sln
+      - run: dotnet build apps/api/NonProfitFund.sln --configuration Release --no-restore
+      - run: dotnet test apps/api/NonProfitFund.sln --configuration Release --no-build
+
+  bicep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/cli@v2
+        with:
+          inlineScript: az bicep build --file infra/bicep/main.bicep
+
